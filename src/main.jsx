@@ -229,8 +229,7 @@ function App() {
             <div className="eyebrow">CORTES FIT BR · PROGRAMA EVOLUÇÃO 30</div>
             <h2>TRÊS GUIAS.<br/>DOIS BÔNUS.<br/><em>UM PRÓXIMO PASSO.</em></h2>
             <p>Conteúdo educativo para adultos saudáveis que querem uma estrutura mais clara para treino, alimentação e rotina.</p>
-            <a className="btn btn-primary btn-large" href="#top">QUERO O PROGRAMA <span>↗</span></a>
-            <small className="offer-note">Preço e checkout não foram informados no briefing. O CTA está pronto para receber o link de compra.</small>
+            <a className="btn btn-primary btn-large" href="https://pay.cakto.com.br/35cgxc9_1120021">QUERO O PROGRAMA <span>↗</span></a>
           </div>
           <div className="offer-stack" aria-hidden="true">
             {guides.map((g, i) => <img key={g.n} className={`offer-cover ob-${i+1}`} src={g.cover} alt="" />)}

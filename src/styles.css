@@ -61,3 +61,28 @@
   .offer-cover.ob-2{left:20%;top:5%}
   .offer-cover.ob-3{left:39%;top:20%}
 }
+
+.gooey-nav-container nav ul li{
+  isolation:isolate!important;
+}
+
+.gooey-nav-container nav ul li>a{
+  position:relative!important;
+  z-index:2!important;
+}
+
+.gooey-nav-container nav ul li::after{
+  z-index:0!important;
+}
+
+.gooey-nav-container nav ul li.active{
+  background:#f7f7f2!important;
+  color:#08120d!important;
+  text-shadow:none!important;
+}
+
+.gooey-nav-container nav ul li.active>a{
+  color:#08120d!important;
+  text-shadow:none!important;
+  opacity:1!important;
+}

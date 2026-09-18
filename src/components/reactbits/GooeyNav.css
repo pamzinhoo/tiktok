@@ -36,6 +36,7 @@
 .gooey-nav-container nav {
   display: flex;
   position: relative;
+  z-index: 2;
   transform: translate3d(0, 0, 0.01px);
 }
 
@@ -56,6 +57,7 @@
 .gooey-nav-container nav ul li {
   border-radius: 100vw;
   position: relative;
+  isolation: isolate;
   cursor: pointer;
   transition:
     background-color 0.3s ease,
@@ -69,6 +71,8 @@
 .gooey-nav-container nav ul li a {
   display: inline-block;
   padding: 0.6em 1em;
+  position: relative;
+  z-index: 2;
 }
 
 
@@ -86,13 +90,19 @@
   opacity: 0;
   transform: scale(0);
   transition: all 0.3s ease;
-  z-index: -1;
+  z-index: 1;
 }
 
 
 .gooey-nav-container nav ul li.active {
-  color: black;
+  background: #f7f7f2;
+  color: #0b160f;
   text-shadow: none;
+}
+
+
+.gooey-nav-container nav ul li.active a {
+  color: #0b160f;
 }
 
 
@@ -112,24 +122,25 @@
   pointer-events: none;
   display: grid;
   place-items: center;
-  z-index: 1;
+  z-index: 0;
 }
 
 
 .gooey-nav-container .effect.text {
-  color: white;
-  transition: color 0.3s ease;
+  display: none;
 }
 
 
 .gooey-nav-container .effect.text.active {
-  color: black;
+  display: none;
 }
 
 
 .gooey-nav-container .effect.filter {
+  display: grid;
   filter: blur(7px) contrast(100) blur(0);
-  mix-blend-mode: lighten;
+  mix-blend-mode: normal;
+  opacity: 0.55;
 }
 
 
@@ -254,5 +265,3 @@
     opacity: 0;
   }
 }
-
-
